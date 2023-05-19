@@ -6,12 +6,41 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vite App</title>
+  <title>Typing Test Game | Fengren</title>
+  <script type="module" src="/main.js"></script>
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="/main.js"></script>
+    <div id="startScreen" class="hide">
+      <h1>Welcome to Typing Test</h1>
+      <button id="startButton">Start Game</button>
+    </div>
+    
+    <div id="gameScreen" class="hide">
+      
+  
+      
+      <div>
+        <input name="name" id="nameInput" />
+        <button id="showScoreButton">Show Leaderboard</button>
+      </div>
+    </div>
+    
+    <div id="scoreScreen">
+      <h1>Leaderboard</h1>
+      <ol>
+        <li>Player 1 - 100 WPM</li>
+        <li>Player 2 - 80 WPM</li>
+      </ol>
+      <button id="showMainButton">Return to start</button>
+    </div>
+
+
 </body>
 
 </html>
