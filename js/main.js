@@ -1,11 +1,10 @@
+
 /*----- constants -----*/
-const wordsPerMinute = 10;
 
 /*----- state variables -----*/
 const game = {
   screen: "startScreen",
   leaderboard: [],
-  points: wordsPerMinute,
 };
 
 /*----- cached elements  -----*/
@@ -13,22 +12,34 @@ const startScreen = document.querySelector("#startScreen");
 const startButton = document.querySelector("#startButton");
 
 const gameScreen = document.querySelector("#gameScreen");
-const guessButton = document.querySelector("#guessButton");
-const showScoreButton = document.querySelector("#showScoreButton");
+const showLeaderBoard = document.querySelector("#showLeaderBoard");
 
 const scoreScreen = document.querySelector("#scoreScreen");
+const addScoreButton = document.querySelector("#addScoreButton");
 const showMainButton = document.querySelector("#showMainButton");
 
 
 /*----- event listeners (Logic) -----*/
+
+import { retryGame } from "./gamescreen";
+
+
+
 function handleStart() {
-  game.screen = "gameScreen"; 
+  game.screen = "gameScreen";
+  retryGame(); 
   render(); 
 }
 
-function handleShowScore() {
+function handleShowLeaderBoard() {
+  game.screen = "scoreScreen";
+  render();
+}
+
+function handleAddLeaderBoard() {
   const name = document.querySelector("#nameInput").value;
-  const person = { name: name, points: game.points };
+  const wordsPerMinute = document.querySelector("#scoreInput").value;
+  const person = { name: name, points: wordsPerMinute};
   game.leaderboard.push(person);
   game.screen = "scoreScreen";
   render();
@@ -60,7 +71,7 @@ function renderLeaderboard() {
 
   for (const person of game.leaderboard) {
     const li = document.createElement("li");
-    li.innerText = `${person.name} scores ${person.points}`;
+    li.innerText = `${person.name} scored a whopping ${person.points} wpm!`;
     leaderBoard.append(li);
   }
 }
@@ -72,10 +83,12 @@ function renderLeaderboard() {
 
 function main() {
   startButton.addEventListener("click", handleStart);
-  showScoreButton.addEventListener("click", handleShowScore);
+  showLeaderBoard.addEventListener("click", handleShowLeaderBoard);
   showMainButton.addEventListener("click", handleMainButton);
+  addScoreButton.addEventListener("click", handleAddLeaderBoard);
   render();
 }
 
 //* only function call in the whole file
 main();
+

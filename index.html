@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Typing Test Game | Fengren</title>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <link rel="stylesheet" href="style.css">
   <style>
     .hide {
       display: none;
@@ -18,16 +19,47 @@
 <body>
     <div id="startScreen" class="hide">
       <h1>Welcome to Typing Test</h1>
+      <h2>Test your typing speed by racing with others.</h2>
       <button id="startButton">Start Game</button>
     </div>
     
     <div id="gameScreen" class="hide">
-      
-  
-      
+      <p>Lets race!</p>
+      <div class="wrapper">
+        <input type="text" class="input-field">
+        <div class="content-box">
+          <div class="typing-text">
+            <p></p>
+          </div>
+          <div class="content">
+            <ul class="result-details">
+              <li class="time">
+                <p>TIME LEFT:</p>
+                <span><strong>60</strong>s</span>
+              </li>
+              <li class="mistake">
+                <p>TYPO:</p>
+                <span><strong>0</strong></span>
+              </li>
+              <li class="wpm">
+                <p>WPM:</p>
+                <span><strong>0</strong></span>
+              </li>
+              <li class="cpm">
+                <p>CPM:</p>
+                <span><strong>0</strong></span>
+              </li>
+            </ul>
+            <button id="tryAgain">Try Again</button>
+          </div>
+        </div>
+      </div>
+      <script refer src="js/paragraphs.js"></script>
+      <script refer src="js/gamescreen.js"></script>
+
+
       <div>
-        <input name="name" id="nameInput" />
-        <button id="showScoreButton">Show Leaderboard</button>
+        <button id="showLeaderBoard">Show Leaderboard</button>
       </div>
     </div>
     
@@ -37,6 +69,9 @@
         <li>Player 1 - 100 WPM</li>
         <li>Player 2 - 80 WPM</li>
       </ol>
+      <input name="name" id="nameInput" placeholder="Enter your name" />
+      <input type="number" id="scoreInput" placeholder="Enter your wpm" />
+      <button id="addScoreButton">Add</button><br>
       <button id="showMainButton">Return to start</button>
     </div>
 

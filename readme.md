@@ -23,12 +23,16 @@ Mistakes calculation
 Show message if take over leadereboard
 
 ###Project Planning
-18/5
-Wireframe and data - done
+
 19/5
 HTML for wireframe (tranisition game screen, leaderboard format) - done
 pseudocode brief for game - done
 render() functions (transition game screen, leaderboard format) - done
+style css - done
+
+Things left to do :
+figure out how to set ranking according to wpm in leaderboard
+add some pictures and design to the game especially front and show screen
 
 ###General Pseudocode
 
@@ -45,18 +49,19 @@ render() functions (transition game screen, leaderboard format) - done
    4.4) main.js file to handle transition of screen
 
 5. Upon loading the game screen:
-   5.1) Initialize the game state variables
-   5.2) Render those values to the page whenever it resets
-   5.3) Have a button to handle, wait for the user to click Try again
-   5.4) Handle player keystroke input
-   5.5) Display paragraph text shadow
-   5.6) Keystroke input to be registered in paragraph text shadow through lettter highlight when each key is pressed.
-   5.7) Show game data statistics that changes when typing: 1) Time left: Start from 60sec countdown 2) Words per min, characters per minute(Optional) 3) Mistakes registering
-   5.8) Have a button to handle, wait for user to click Score Screen to transition to score screen
-   5.9) script.js file to handle game screen
+   5.1) Create js folder with 2 javascript file for game screen.
+
+   1. paragraphs.js to handle random paragraph texts 2) script.js to handle the behaviour of the game screen.
+      5.2) Initialize the game state variables
+      5.3) Render those values to the page whenever it resets
+      5.4) Have a button to handle, wait for the user to click Try again
+      5.5) Handle player keystroke input
+      5.6) Display paragraph text shadow
+      5.7) Keystroke input to be registered in paragraph text shadow through lettter highlight when each key is pressed.
+      5.8) Show game data statistics that changes when typing: 1) Time left: Start from 60sec countdown 2) Words per min, characters per minute 3) Mistakes registering
+      5.9) Have a button to handle, wait for user to click Score Screen to transition to score screen
 
 6. Upon loading the score screen:
-   6.1) Have a button to handle return to main screen (Optional)
+   6.1) Have a button to handle return to main screen
    6.2) Update the score board with the person name and wpm
    6.3) Have a input text box, for player to key in their name and score(wpm)
-   6.4) Optional: Have the score screen arrange by descending wpm
