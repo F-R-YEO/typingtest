@@ -1,4 +1,4 @@
-const paragraphs = [
+export const paragraphs = [
     "Betty decided to write a short story and she was sure it was going to be amazing. She had already written it in her head and each time she thought about it she grinned from ear to ear knowing how wonderful it would be. She could imagine the accolades coming in and the praise she would receive for creating such a wonderful piece. She was therefore extremely frustrated when she actually sat down to write the short story and the story that was so beautiful inside her head refused to come out that way on paper.",
     "She sat deep in thought. The next word that came out o her mouth would likely be the most important word of her life. It had to be exact with no possibility of being misinterpreted. She was ready. She looked deeply into his eyes and said, 'Octopus.'",
     "It was difficult for him to admit he was wrong. He had been so certain that he was correct and the deeply held belief could never be shaken. Yet the proof that he had been incorrect stood right before his eyes. 'See daddy, I told you that they are real!' his daughter excitedly proclaimed.",

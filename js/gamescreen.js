@@ -1,4 +1,4 @@
-
+import { paragraphs } from "./paragraphs";
 /*----- constants -----*/
 const typingText = document.querySelector(".typing-text p");
 const inputField = document.querySelector(".wrapper .input-field");
@@ -93,7 +93,7 @@ function initTimer(){
     }
 }
 
-export function retryGame(){
+export const retryGame  = () =>{
     // load new random paragraph and render function to reset each game state variable to initialise
     randomParagraph();
     clearInterval(timer);
