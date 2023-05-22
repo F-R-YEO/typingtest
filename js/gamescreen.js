@@ -11,8 +11,8 @@ const tryAgainButton = document.querySelector("#tryAgain")
 
 
 /*----- state variables -----*/
-let timer = 5;
-let maxTime = 5;
+let timer = 60;
+let maxTime = 60;
 let timeLeft = maxTime;
 let charIndex = 0;
 let typos = 0;
